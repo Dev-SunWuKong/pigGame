@@ -40,9 +40,11 @@ const newGame = function () {
   scores[1] = 0;
 
   diceEl.classList.add('hidden');
-  if (!player0.classList.contains('player--active')) {
-    addRemove();
-  }
+
+  player0.classList.remove('player--winner');
+  player1.classList.remove('player--winner');
+
+  player0.classList.add('player--active');
 };
 
 btnRoll.addEventListener('click', function () {
